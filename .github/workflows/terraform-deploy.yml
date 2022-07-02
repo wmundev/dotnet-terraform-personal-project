@@ -16,6 +16,18 @@ jobs:
       - uses: actions/checkout@v2
       - uses: hashicorp/setup-terraform@v1
 
+      - name: Build dotnet SNS Test lambda
+        id: build-sns-test-lambda
+        run: | 
+          cd ../..
+          # See https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
+          dotnet publish -c Release -r linux-arm64
+          cd worker/infra
+        continue-on-error: false
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
