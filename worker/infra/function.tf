@@ -1,7 +1,7 @@
 ﻿data "archive_file" "lambda_hello_world" {
   type = "zip"
 
-  source_dir  = "${path.module}/../project/SNSTest/src/SNSTest/bin/Debug/net6.0"
+  source_dir  = "${path.module}/../project/SNSTest/src/SNSTest/bin/Release/net6.0"
   output_path = "${path.module}/project.zip"
 }
 
