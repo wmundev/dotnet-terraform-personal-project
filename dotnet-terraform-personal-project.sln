@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "worker", "worker", "{8DBBA368-D0DC-44D0-ABD8-39B3D99D27CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{9950D525-A032-414E-BFC0-D775D5C0A259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SNSTest", "SNSTest", "{D2740FCE-F5FF-4D0B-A4B1-8095AB42EA70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{701389DD-BAA6-41F3-9E52-88DD60D76A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNSTest", "worker\project\SNSTest\src\SNSTest\SNSTest.csproj", "{4F139962-FB56-4527-811A-73E8957AE49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F139962-FB56-4527-811A-73E8957AE49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F139962-FB56-4527-811A-73E8957AE49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F139962-FB56-4527-811A-73E8957AE49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F139962-FB56-4527-811A-73E8957AE49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9950D525-A032-414E-BFC0-D775D5C0A259} = {8DBBA368-D0DC-44D0-ABD8-39B3D99D27CA}
+		{D2740FCE-F5FF-4D0B-A4B1-8095AB42EA70} = {9950D525-A032-414E-BFC0-D775D5C0A259}
+		{701389DD-BAA6-41F3-9E52-88DD60D76A0C} = {D2740FCE-F5FF-4D0B-A4B1-8095AB42EA70}
+		{4F139962-FB56-4527-811A-73E8957AE49B} = {701389DD-BAA6-41F3-9E52-88DD60D76A0C}
+	EndGlobalSection
+EndGlobal
