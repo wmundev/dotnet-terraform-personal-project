@@ -36,7 +36,7 @@ resource "aws_cloudwatch_log_group" "hello_world" {
 }
 
 resource "aws_iam_role" "lambda_exec" {
-  name = "serverless_lambda"
+  name = "dotnet-terraform-worker-lambda-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -56,3 +56,30 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
   role       = aws_iam_role.lambda_exec.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
+
+#data "aws_iam_policy_document" "sns_policy" {
+#  policy_id = "sns-test-policy"
+#
+#  statement {
+#    actions = [
+#      "SNS:Subscribe"
+#    ]
+#
+#    effect = "Allow"
+#
+#    resources = [
+#      aws_sns_topic.user_updates.arn
+#    ]
+#  }
+#}
+#
+#resource "aws_iam_policy" "sns_policy" {
+#  name   = "example_policy"
+#  path   = "/"
+#  policy = data.aws_iam_policy_document.sns_policy.json
+#}
+#
+#resource "aws_iam_role_policy_attachment" "test-attach" {
+#  role       = aws_iam_role.lambda_exec.name
+#  policy_arn = aws_iam_policy.sns_policy.arn
+#}

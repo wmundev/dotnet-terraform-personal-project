@@ -4,3 +4,5 @@
 **/obj
 
 **/aws-lambda-tools-defaults.json
+
+worker/publish
