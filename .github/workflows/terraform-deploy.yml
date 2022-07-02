@@ -21,7 +21,7 @@ jobs:
         run: | 
           cd ../..
           # See https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
-          dotnet publish -c Release -r linux-arm64
+          dotnet publish -c Release -r linux-arm64 -o ./worker/publish
           cd worker/infra
         continue-on-error: false
         env:
